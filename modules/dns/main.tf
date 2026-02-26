@@ -17,7 +17,11 @@ resource "google_dns_managed_zone" "private" {
   name       = var.private_zone_name
   dns_name   = "${var.private_zone_fqdn}."
   visibility = "private"
-  private_visibility_config { networks { network_url = var.network_self_link } }
+  private_visibility_config { 
+    networks { 
+      network_url = var.network_self_link
+    } 
+  }
 }
 
 resource "google_dns_record_set" "vm_records" {
