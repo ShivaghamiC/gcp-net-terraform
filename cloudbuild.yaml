@@ -20,11 +20,11 @@ steps:
       gcloud --version
       terraform -version || true
 
-- name: hashicorp/terraform:1.6.6
+- name: 'hashicorp/terraform:1.6.6'
   id: fmt-validate
   entrypoint: sh
   args:
-    - -c
+    - '-c'
     - |
       cd ${_ENV_DIR}
       terraform fmt -check
