@@ -11,12 +11,11 @@ resource "google_compute_instance" "vm" {
   tags         = var.tags
   boot_disk { 
     initialize_params { 
-      image_project = "debian-cloud" 
-      image_family = "debian-12"
+      image = "debian-cloud/debian-12" 
     }
   }
   network_interface {
-   # network    = var.network
+    network    = var.network
     subnetwork = var.subnet
     # No external IP => private-only instance
   }
