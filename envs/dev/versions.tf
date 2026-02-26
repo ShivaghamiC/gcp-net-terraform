@@ -24,19 +24,19 @@ provider "google-beta" {
   impersonate_service_account = var.deploy_sa_email
 }
 
-variable "project_id" {
-  type        = string
-  description = "The GCP project ID"
-  default     = "terraform-488518"
-}
+#variable "project_id" {
+ # type        = string
+  #description = "The GCP project ID"
+  #default     = "terraform-488518"
+#}
 
-variable "region" {
-  type        = string
-  default     = "asia-south1"
-}
+#variable "region" {
+ # type        = string
+  #default     = "asia-south1"
+#}
 
-variable "deploy_sa_email" {
-  type        = string
-  description = "The email of the service account to impersonate"
-  default     = "terraform-deployer@terraform-488518.iam.gserviceaccount.com"
-}
+#variable "deploy_sa_email" {
+ # type        = string
+  #description = "The email of the service account to impersonate"
+  #default     = "terraform-deployer@terraform-488518.iam.gserviceaccount.com"
+#}
