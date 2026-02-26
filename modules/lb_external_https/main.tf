@@ -3,7 +3,11 @@ resource "google_compute_instance_template" "tpl" {
   name_prefix = "${var.name}-tpl-"
   machine_type = var.machine_type
   tags = ["web"]
-  disk { source_image = "debian-cloud/debian-12" auto_delete = true boot = true }
+  disk { 
+    source_image = "debian-cloud/debian-12" 
+    auto_delete = true 
+    boot = true
+}
   network_interface {
     network    = var.network
     subnetwork = var.subnet
