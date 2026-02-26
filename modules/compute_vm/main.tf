@@ -25,16 +25,16 @@ resource "google_compute_instance" "vm" {
 
   service_account {
     email  = google_service_account.sa.email
-    scopes = ["https://www.googleapis.com/auth/cloud-platform"] [cite: 4]
+    scopes = ["https://www.googleapis.com/auth/cloud-platform"]
   }
 
   metadata = {
-    enable-oslogin = "TRUE" [cite: 4]
+    enable-oslogin = "TRUE"
   }
 
   shielded_instance_config {
-    enable_secure_boot = true [cite: 4]
+    enable_secure_boot = true
   }
 
-  metadata_startup_script = var.startup_script [cite: 4]
+  metadata_startup_script = var.startup_script
 }
