@@ -2,7 +2,7 @@
 # Uses SA impersonation inside the Terraform provider; no JSON keys used.
 
 substitutions:
-  _ENV_DIR: "envs/dev"
+  _ENV_DIR: "."
   _TF_STATE_BUCKET: "tfstate-terraform-488518"
   _TF_STATE_PREFIX: "network/dev"
 
