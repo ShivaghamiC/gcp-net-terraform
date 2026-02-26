@@ -7,7 +7,10 @@ resource "google_compute_firewall" "allow_iap_ssh" {
   direction = "INGRESS"
   priority  = 1000
   source_ranges = [local.iap_range]
-  allow { protocol = "tcp" ports = ["22"] }
+  allow { 
+    protocol = "tcp" 
+    ports = ["22"] 
+  }
   target_service_accounts = var.ssh_target_sas
 }
 
@@ -17,6 +20,9 @@ resource "google_compute_firewall" "allow_web" {
   direction = "INGRESS"
   priority  = 1000
   source_ranges = var.web_source_ranges
-  allow { protocol = "tcp" ports = ["80","443"] }
+  allow { 
+    protocol = "tcp" 
+    ports = ["80","443"]
+  }
   target_tags = var.web_target_tags
 }
