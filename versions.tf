@@ -27,6 +27,7 @@ provider "google-beta" {
 variable "project_id" {
   type        = string
   description = "The GCP project ID"
+  default     = "terraform-488518"
 }
 
 variable "region" {
