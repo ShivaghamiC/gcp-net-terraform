@@ -1,36 +1,36 @@
 variable "name" {
   type        = string
-  description = "The name of the VM instance." [cite: 1]
+  description = "The name of the VM instance."
 }
 
 variable "sa_id" {
   type        = string
-  description = "The account ID for the service account." [cite: 1]
+  description = "The account ID for the service account."
 }
 
 variable "zone" {
   type        = string
-  default     = "us-central1-a" [cite: 1]
+  default     = "us-central1-a"
 }
 
 variable "machine_type" {
   type        = string
-  default     = "e2-micro" [cite: 1]
+  default     = "e2-micro"
 }
 
 variable "network" {
   type        = string
-  description = "The VPC network name." [cite: 1]
+  description = "The VPC network name."
 }
 
 variable "subnet" {
   type        = string
-  description = "The subnetwork name." [cite: 1]
+  description = "The subnetwork name."
 }
 
 variable "tags" {
   type        = list(string)
-  default     = [] [cite: 1]
+  default     = []
 }
 
 variable "startup_script" {
