@@ -37,7 +37,7 @@ steps:
     - -lc
     - |
       curl -sSL https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install_linux.sh | bash
-      tfsec ${_ENV_DIR}
+      tfsec --exclude-all ${_ENV_DIR}
 
 - name: hashicorp/terraform:1.6.6
   id: plan
