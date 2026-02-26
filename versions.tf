@@ -38,4 +38,5 @@ variable "region" {
 variable "deploy_sa_email" {
   type        = string
   description = "The email of the service account to impersonate"
+  default     = "terraform-deployer@terraform-488518.iam.gserviceaccount.com"
 }
