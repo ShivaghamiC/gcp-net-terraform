@@ -18,7 +18,7 @@ resource "google_compute_instance" "vm" {
     }
   }
   network_interface {
-    network    = var.network
+    # network    = var.network
     subnetwork = var.subnet
     # No external IP => private-only instance
   }
