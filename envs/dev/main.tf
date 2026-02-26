@@ -96,7 +96,7 @@ module "dns" {
   external_ip       = module.ext_lb.lb_ip
   network_self_link = module.vpc1.network_self_link
   private_records   = {
-    "vm-a" = module.vm_a.internal_ip,
+    "vm-a" = module.vm_a.internal_ip
     "vm-b" = module.vm_b.internal_ip
   }
 }
