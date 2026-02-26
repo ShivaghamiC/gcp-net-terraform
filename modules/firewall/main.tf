@@ -1,4 +1,3 @@
-tfsec:ignore:google-compute-no-public-ingress
 locals { iap_range = "35.235.240.0/20" }
 
 resource "google_compute_firewall" "allow_iap_ssh" {
