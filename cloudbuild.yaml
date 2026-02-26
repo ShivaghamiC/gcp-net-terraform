@@ -56,5 +56,5 @@ steps:
     - -c
     - |
     - -chdir=envs/dev
-      # cd ${_ENV_DIR}
+      
       terraform apply -input=false -auto-approve tfplan
