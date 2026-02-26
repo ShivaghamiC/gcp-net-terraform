@@ -32,7 +32,10 @@ resource "google_compute_region_instance_group_manager" "mig" {
   region             = var.region
   version { instance_template = google_compute_instance_template.tpl.id }
   target_size = 2
-  auto_healing_policies { health_check = google_compute_health_check.hc.id }
+  auto_healing_policies { 
+    health_check = google_compute_health_check.hc.id
+    initial_delay_sec = 120
+  }
 }
 
 resource "google_compute_backend_service" "be" {
