@@ -8,7 +8,10 @@ resource "google_compute_ha_vpn_gateway" "gw" {
 resource "google_compute_external_vpn_gateway" "peer" {
   name            = "${var.name}-peer"
   redundancy_type = "SINGLE_IP_INTERNALLY_REDUNDANT"
-  interface { id = 0 ip_address = var.peer_gateway_ip }
+  interface { 
+    id = 0
+    ip_address = var.peer_gateway_ip
+  }
 }
 
 resource "google_compute_router" "cr" {
