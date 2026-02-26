@@ -20,5 +20,5 @@ provider "google-beta" {
 }
 
 variable "project_id" { type = string }
-variable "region"     { type = string  default = "asia-south1" }
+variable "region"     { type = string }
 variable "deploy_sa_email" { type = string }
