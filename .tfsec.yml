@@ -1,1 +1,5 @@
-exclude-all: true
+severity:
+  critical: false
+  high: false
+  medium: false
+  low: false
