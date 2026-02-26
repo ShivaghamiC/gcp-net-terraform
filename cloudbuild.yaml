@@ -1,9 +1,8 @@
-
 # Cloud Build pipeline for Terraform (plan+apply) with security scanning
 # Uses SA impersonation inside the Terraform provider; no JSON keys used.
 
 substitutions:
-  _ENV_DIR: "."
+  _ENV_DIR: "envs/dev"
   _TF_STATE_BUCKET: "tfstate-terraform-488518"
   _TF_STATE_PREFIX: "network/dev"
 
