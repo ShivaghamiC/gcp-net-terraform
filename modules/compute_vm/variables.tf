@@ -6,7 +6,6 @@ variable "name" {
 variable "sa_id" {
   type        = string
   description = "The account ID for the service account."
-  default     = "terraform-deployer@terraform-488518.am.gserviceaccount.com"
 }
 
 variable "zone" {
