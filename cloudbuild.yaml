@@ -16,7 +16,7 @@ steps:
     gcloud auth print-access-token --impersonate-service-account="${DEPLOY_SA}" >/dev/null && echo "Impersonation OK" || echo "Impersonation FAILED"
 
 substitutions:
-  _ENV_DIR: "."
+  _ENV_DIR: "envs/dev"
   _TF_STATE_BUCKET: "tfstate-terraform-488518"
   _TF_STATE_PREFIX: "network/dev"
 
