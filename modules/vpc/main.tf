@@ -11,7 +11,7 @@ resource "google_compute_subnetwork" "subs" {
   name                     = each.value.name
   ip_cidr_range            = each.value.cidr
   region                   = each.value.region
-  network                  = google_compute_network.this.id
+  network                  = google_compute_network.vpc.id
   private_ip_google_access = true
   log_config {
     aggregation_interval = "INTERVAL_5_MIN"
