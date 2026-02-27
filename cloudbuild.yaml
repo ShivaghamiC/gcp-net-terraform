@@ -1,6 +1,20 @@
 # Cloud Build pipeline for Terraform (plan+apply) with security scanning
 # Uses SA impersonation inside the Terraform provider; no JSON keys used.
 
+steps:
+- name: gcr.io/google.com/cloudsdktool/cloud-sdk
+  id: debug-whoami
+  entrypoint: bash
+  args:
+  - -c
+  - |
+    set -e
+    echo "Active project:"; gcloud config get-value project
+    echo "ADC accounts:"; gcloud auth list
+    echo "Impersonation target: ${DEPLOY_SA}"
+    echo "Try impersonation now:"
+    gcloud auth print-access-token --impersonate-service-account="${DEPLOY_SA}" >/dev/null && echo "Impersonation OK" || echo "Impersonation FAILED"
+
 substitutions:
   _ENV_DIR: "envs/dev"
   _TF_STATE_BUCKET: "tfstate-terraform-488518"
