@@ -13,9 +13,9 @@ terraform {
 }
 
 provider "google" {
-  project                     = var.project_id
-  region                      = var.region
-  impersonate_service_account = var.deploy_sa_email
+  project       = "terraform-488518"
+  region           = "asia-south1"
+  impersonate_service_account  = "terraform-deployer@terraform-488518.iam.gserviceaccount.com"
 }
 
 provider "google-beta" {
